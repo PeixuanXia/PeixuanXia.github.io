@@ -20,9 +20,9 @@ text_skin: orange # "default" (default), "dark", "forest", "ocean", "chocolate",
 highlight_theme: tomorrow-night-eighties # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : 
+title   : 夏培萱的个人网站
 description: > # this means to ignore newlines until "Language & timezone"
-  藤藤菜的个人网站
+  A beginner of Distributed Tracing.
 
 
 ## => Language and Timezone
@@ -39,7 +39,7 @@ author:
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : A beginner of Distributed Tracing.
-  email     :
+  email     : PeixuanXia@gmail.com
   facebook  : peixuan.xia # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : PeixuanXia # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -55,7 +55,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: PeixuanXia/peixuanxia.github.com #user_name/repo_name
+repository: PeixuanXia/PeixuanXia.github.io #user_name/repo_name
 repository_tree: master
 
 
