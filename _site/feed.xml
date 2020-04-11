@@ -1,2 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-Hans"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh-Hans" /><updated>2020-04-08T03:43:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">夏培萱的个人网站</title><subtitle>A beginner of Distributed Tracing.
-</subtitle><author><name>藤藤菜</name><email>PeixuanXia@gmail.com</email></author><entry xml:lang="zh-Hans"><title type="html">Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model入门</title><link href="http://localhost:4000/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html" rel="alternate" type="text/html" title="Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model入门" /><published>2020-04-08T00:00:00+08:00</published><updated>2020-04-08T00:00:00+08:00</updated><id>http://localhost:4000/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner</id><content type="html" xml:base="http://localhost:4000/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html">&lt;p&gt;这是一个测试页面&lt;/p&gt;</content><author><name>藤藤菜</name></author><category term="JDT" /><summary type="html">这是一个测试页面</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-Hans"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh-Hans" /><updated>2020-04-12T02:35:30+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">夏培萱的个人网站</title><subtitle>A beginner of Distributed Tracing.
+</subtitle><author><name>藤藤菜</name><email>PeixuanXia@gmail.com</email></author><entry xml:lang="zh-Hans"><title type="html">Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model入门</title><link href="http://localhost:4000/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html" rel="alternate" type="text/html" title="Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model入门" /><published>2020-04-08T00:00:00+08:00</published><updated>2020-04-08T00:00:00+08:00</updated><id>http://localhost:4000/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner</id><content type="html" xml:base="http://localhost:4000/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html">&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;h4 id=&quot;1-java-model-和-java-abstract-syntax-tree&quot;&gt;1. Java model 和 Java Abstract Syntax Tree&lt;/h4&gt;
+
+&lt;p&gt;JDT提供用于访问和控制Java源代码的API。可以通过以下方式访问Java源代码：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Java Model&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;_Abstract Syntax Tree(AST)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;11-java-model&quot;&gt;1.1. Java Model&lt;/h5&gt;
+
+&lt;p&gt;每个Java project (Java项目) 都可以使用一个model (模型) 表示。这个模型是Java项目的一个轻量级容错表示。它虽然不能跟AST一样包含那么多信息但是它可以被快速构建。例如&lt;em&gt;outline view&lt;/em&gt; (eclipse的大纲视图) 就是使用Java model表示出来的。&lt;/p&gt;
+
+&lt;p&gt;Java model被定义在 &lt;code class=&quot;highlighter-rouge&quot;&gt;org.eclipse.jdt.core&lt;/code&gt; 插件中。Java model使用树形结构表示。该树形结构可以使用下表描述。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Project Element&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Java Model element&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Java project&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>藤藤菜</name></author><category term="JDT" /><summary type="html">[TOC] 1. Java model 和 Java Abstract Syntax Tree JDT提供用于访问和控制Java源代码的API。可以通过以下方式访问Java源代码： Java Model _Abstract Syntax Tree(AST) 1.1. Java Model 每个Java project (Java项目) 都可以使用一个model (模型) 表示。这个模型是Java项目的一个轻量级容错表示。它虽然不能跟AST一样包含那么多信息但是它可以被快速构建。例如outline view (eclipse的大纲视图) 就是使用Java model表示出来的。 Java model被定义在 org.eclipse.jdt.core 插件中。Java model使用树形结构表示。该树形结构可以使用下表描述。 Project Element Java Model element Description Java project    </summary></entry></feed>

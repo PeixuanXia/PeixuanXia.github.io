@@ -1,0 +1,35 @@
+I"�<p>[TOC]</p>
+
+<h4 id="1-java-model-和-java-abstract-syntax-tree">1. Java model 和 Java Abstract Syntax Tree</h4>
+
+<p>JDT提供用于访问和控制Java源代码的API。可以通过以下方式访问Java源代码：</p>
+
+<ul>
+  <li><em>Java Model</em></li>
+  <li>_Abstract Syntax Tree(AST)</li>
+</ul>
+
+<h5 id="11-java-model">1.1. Java Model</h5>
+
+<p>每个Java project (Java项目) 都可以使用一个model (模型) 表示。这个模型是Java项目的一个轻量级容错表示。它虽然不能跟AST一样包含那么多信息但是它可以被快速构建。例如<em>outline view</em> (eclipse的大纲视图) 就是使用Java model表示出来的。</p>
+
+<p>Java model被定义在 <code class="highlighter-rouge">org.eclipse.jdt.core</code> 插件中。Java model使用树形结构表示。该树形结构可以使用下表描述。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Project Element</strong></th>
+      <th><strong>Java Model element</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Java project</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

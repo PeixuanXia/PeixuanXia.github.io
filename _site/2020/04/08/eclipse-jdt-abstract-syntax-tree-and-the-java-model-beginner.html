@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model入门 - 夏培萱的个人网站</title>
 
-<meta name="description" content="这是一个测试页面">
+<meta name="description" content="[TOC]1. Java model 和 Java Abstract Syntax TreeJDT提供用于访问和控制Java源代码的API。可以通过以下方式访问Java源代码：  Java Model  _Abstract Syntax Tree(AST)1.1. Java Model每个Java project...">
 <link rel="canonical" href="http://localhost:4000/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html"><link rel="alternate" type="application/rss+xml" title="夏培萱的个人网站" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
@@ -287,11 +287,44 @@
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=JDT">JDT</a>
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>藤藤菜</span></li><li><i class="far fa-calendar-alt"></i> <span>2020年 04月08日</span>
-            </li><li><i class="far fa-eye"></i> <span class="js-pageview" data-page-key="akeyname">0</span> 阅读</li></ul></div><meta itemprop="author" content="藤藤菜"/><meta itemprop="datePublished" content="2020-04-08T00:00:00+08:00">
+            </li><li><i class="far fa-eye"></i> <span class="js-pageview" data-page-key="elipsejdt">0</span> 阅读</li></ul></div><meta itemprop="author" content="藤藤菜"/><meta itemprop="datePublished" content="2020-04-08T00:00:00+08:00">
     <meta itemprop="keywords" content="JDT"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>这是一个测试页面</p>
+<div class="article__content" itemprop="articleBody"><p>[TOC]</p>
+
+<h4 id="1-java-model-和-java-abstract-syntax-tree">1. Java model 和 Java Abstract Syntax Tree</h4>
+
+<p>JDT提供用于访问和控制Java源代码的API。可以通过以下方式访问Java源代码：</p>
+
+<ul>
+  <li><em>Java Model</em></li>
+  <li>_Abstract Syntax Tree(AST)</li>
+</ul>
+
+<h5 id="11-java-model">1.1. Java Model</h5>
+
+<p>每个Java project (Java项目) 都可以使用一个model (模型) 表示。这个模型是Java项目的一个轻量级容错表示。它虽然不能跟AST一样包含那么多信息但是它可以被快速构建。例如<em>outline view</em> (eclipse的大纲视图) 就是使用Java model表示出来的。</p>
+
+<p>Java model被定义在 <code class="highlighter-rouge">org.eclipse.jdt.core</code> 插件中。Java model使用树形结构表示。该树形结构可以使用下表描述。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Project Element</strong></th>
+      <th><strong>Java Model element</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Java project</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
 </div><section class="article__sharing d-print-none"><!-- Addthis BEGIN --><script type="text/javascript"
     src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e8cd26a772f3015"></script>
   <div class="addthis_inline_share_toolbox addthis_default_style"></div><!-- Addthis END -->
