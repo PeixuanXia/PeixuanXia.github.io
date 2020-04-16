@@ -1,0 +1,9 @@
+I"b<p><code class="highlighter-rouge">brave-cassandra-master/cassandra</code>该文件夹中包含了对Cassandra的tracing植入。</p>
+
+<p><code class="highlighter-rouge">brave.cassandra.Tracing</code>这个类从the custom payload of incoming requests提取trace state（比如，每个请求花费了多少时间、每个子操作花费了多少时间和一些相关tag，例如session ID这些），并汇报给Zipkin。</p>
+
+<h4 id="集成">集成</h4>
+
+<p>Cassandra tracing 和 Http tracing很像。Client和Server双方要对如何发送和接受the trace context达成一致，才能正常工作。</p>
+
+:ET

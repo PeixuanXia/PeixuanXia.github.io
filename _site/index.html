@@ -280,8 +280,38 @@
 
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>主页</h1></header><meta itemprop="headline" content="主页"><meta itemprop="author" content="藤藤菜"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html"><h2 itemprop="headline" class="item__header">Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model入门</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">[TOC]
+          <header><a href="/2020/04/15/Dapper-a-Large-Scale-Distributed-Systems-Tracing-Infrastructure.html"><h2 itemprop="headline" class="item__header">Dapper, a Large-Scale Distributed Systems Tracing Infrastructure</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">形式上，我们的Dapper traces使用trees（树形结构）、spans、annotations（标注）表示。
+
+2.1 Trace trees and spans
+
+在一个Dapper trace tree中，每个树节点都是一个基本工作但愿，我们称之为s pans。每条边都表示一个span和他父span的随机关系。span本身是一个时间戳记录日志，并与span在trace tree中的位置无关，日志中编码了这个span的开始时间和结束时间。其他RPC相关的时间数据和零到多个基于特定应用程序相关的annotations我们将在2.3节讨论。
+
+图二展示了spans是如何形成一个更大的trace树形结构。Dapper为每个span记录一个人类可读的span name、span id...</div><p><a href="/2020/04/15/Dapper-a-Large-Scale-Distributed-Systems-Tracing-Infrastructure.html">阅读更多</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Dapper">Dapper</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>藤藤菜</span></li><li><i class="far fa-calendar-alt"></i> <span>2020年 04月15日</span>
+            </li><li><i class="far fa-eye"></i> <span class="js-pageview" data-page-key="Dapper">0</span> 阅读</li></ul></div><meta itemprop="author" content="藤藤菜"/><meta itemprop="datePublished" content="2020-04-15T00:00:00+08:00">
+    <meta itemprop="keywords" content="Dapper"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/04/14/brave-instrumentation-cassandra.html"><h2 itemprop="headline" class="item__header">brave-instrumentation-cassandra</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">brave-cassandra-master/cassandra该文件夹中包含了对Cassandra的tracing植入。
+
+brave.cassandra.Tracing这个类从the custom payload of incoming requests提取trace state（比如，每个请求花费了多少时间、每个子操作花费了多少时间和一些相关tag，例如session ID这些），并汇报给Zipkin。
+
+集成
+
+Cassandra tracing 和 Http tracing很像。Client和Server双方要对如何发送和接受the trace context达成一致，才能正常工作。</div><p><a href="/2020/04/14/brave-instrumentation-cassandra.html">阅读更多</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=tracing">tracing</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>藤藤菜</span></li><li><i class="far fa-calendar-alt"></i> <span>2020年 04月14日</span>
+            </li><li><i class="far fa-eye"></i> <span class="js-pageview" data-page-key="braveinstrumentationcassandra">0</span> 阅读</li></ul></div><meta itemprop="author" content="藤藤菜"/><meta itemprop="datePublished" content="2020-04-14T00:00:00+08:00">
+    <meta itemprop="keywords" content="tracing"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html"><h2 itemprop="headline" class="item__header">Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">源教程链接 Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model
+
+本文是该教程的翻译，初衷是为了帮助自己理解，分享于此希望能和同样使用JDT的程序员进行交流，下文若有理解不当的地方欢迎斧正。
 
 1. Java model 和 Java Abstract Syntax Tree
 
@@ -294,9 +324,7 @@ JDT提供用于访问和控制Java源代码的API。可以通过以下方式访�
 
 1.1. Java Model
 
-每个Java project (Java项目) 都可以使用一个model (模型) 表示。这个模型是Java项目的一个轻量级容错表示。它虽然不能跟AST一样包含那么多信息但是它可以被快速构建。例如outline view (eclipse的大纲视图) 就是使用Java model表示出来的。
-
-Java model被定义在 org.eclipse.jdt.core 插件中。Jav...</div><p><a href="/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html">阅读更多</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+每个Java project (Java项目) 都可以使用一个model (模型) 表示。这个模型是Java项目的一个轻量级容错表示。...</div><p><a href="/2020/04/08/eclipse-jdt-abstract-syntax-tree-and-the-java-model-beginner.html">阅读更多</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=JDT">JDT</a>
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>藤藤菜</span></li><li><i class="far fa-calendar-alt"></i> <span>2020年 04月08日</span>

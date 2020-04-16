@@ -1,0 +1,64 @@
+I"�
+<p>源教程链接 <a href="https://www.vogella.com/tutorials/EclipseJDT/article.html#the-java-model-and-the-java-abstract-syntax-tree">Eclipse JDT - Abstract Syntax Tree (AST) and the Java Model</a></p>
+
+<p>本文是该教程的翻译，初衷是为了帮助自己理解，分享于此希望能和同样使用JDT的程序员进行交流，下文若有理解不当的地方欢迎斧正。</p>
+
+<h4 id="1-java-model-和-java-abstract-syntax-tree">1. Java model 和 Java Abstract Syntax Tree</h4>
+
+<p>JDT提供用于访问和控制Java源代码的API。可以通过以下方式访问Java源代码：</p>
+
+<ul>
+  <li><em>Java Model</em></li>
+  <li>_Abstract Syntax Tree(AST)</li>
+</ul>
+
+<h5 id="11-java-model">1.1. Java Model</h5>
+
+<p>每个Java project (Java项目) 都可以使用一个model (模型) 表示。这个模型是Java项目的一个轻量级容错表示。它虽然不能跟AST一样包含那么多信息但是它可以被快速构建。例如<em>outline view</em> (eclipse的大纲视图) 就是使用Java model表示出来的。</p>
+
+<p>Java model被定义在 <code class="highlighter-rouge">org.eclipse.jdt.core</code> 插件中。Java model使用树形结构表示。该树形结构可以使用下表描述。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Project Element</strong></th>
+      <th><strong>Java Model element</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Java project</td>
+      <td>IJavaProject</td>
+      <td>包含其他所有对象的Java project</td>
+    </tr>
+    <tr>
+      <td>src folder / bin folder / or external library</td>
+      <td>IPackageFragmentRoot</td>
+      <td>包含源代码或者二进制文件，可以是一个文件夹或者一个library (zip / jar / file)</td>
+    </tr>
+    <tr>
+      <td>Each package</td>
+      <td>IPackageFragment</td>
+      <td>每个package都在IPackageFragmentRoot节点下，sub-packages (子包)并不是package的叶子结点，他们都直接列于IPackageFragmentRoot节点下</td>
+    </tr>
+    <tr>
+      <td>Java Source File</td>
+      <td>ICompilationUnit</td>
+      <td>源文件通常位于package节点下</td>
+    </tr>
+    <tr>
+      <td>Types / Fields / Methods</td>
+      <td>IType / IField / IMethod</td>
+      <td>Types, fields and methods</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="12-abstract-syntax-tree-ast">1.2. Abstract Syntax Tree (AST)</h5>
+
+<p>AST是Java源代码详细的树型表示。AST定义了API用于修改、创建、浏览和删除源代码。</p>
+
+<p>AST的主包是<code class="highlighter-rouge">org.eclipse.jdt.core.dom</code> (位于<code class="highlighter-rouge">org.eclipse.jdt.core</code> 插件中)。</p>
+
+:ET
